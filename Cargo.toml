@@ -1,0 +1,17 @@
+[package]
+name = "telorgon-portal-picker"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+telorgon = {
+    path = "../telorgon/crates/telorgon",
+    default-features = false,
+    features = ["shell-screencast-linux", "application-software", "application-vulkan-linux"]
+}
+
+[profile.telorgon-profile]
+inherits = "release"
+debug = 1
+incremental = true
+strip = "none"
